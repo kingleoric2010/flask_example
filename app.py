@@ -12,7 +12,7 @@ def hello():
 
 @app.route('/about/')
 def about():
-    return 'The about page'
+    return redirect(url_for('static', filename='style.css'))
 
 @app.route('/user/<username>')
 def show_user_profile(username):
