@@ -25,5 +25,9 @@ def show_post(post_id):
     # show the post with the given id, the id is an integer
     return 'Post %d' % post_id
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return "you are evil"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
