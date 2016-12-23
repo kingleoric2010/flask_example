@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for, redirect
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,7 +7,8 @@ def index():
 
 @app.route('/hello')
 def hello():
-    return 'Hello World'
+    #return 'Hello World'
+    return redirect(url_for('show_user_profile', username='laimingxing'))
 
 @app.route('/about/')
 def about():
