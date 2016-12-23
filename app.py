@@ -29,5 +29,9 @@ def show_post(post_id):
 def page_not_found(error):
     return "you are evil"
 
+@app.cli.command('initdb')
+def init_db():
+    print "initialize db"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
